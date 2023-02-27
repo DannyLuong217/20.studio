@@ -51,7 +51,7 @@ export default function Services() {
   return (
     <>
         <div className='services-section'>
-            <div className='title'>
+            <div className='title h2--wrapper---1'>
                 <h2>Our Services</h2>
             </div>
             <div className='detail' id='view-services'>

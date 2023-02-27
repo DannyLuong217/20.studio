@@ -1,6 +1,6 @@
 :root {
     --primary-color:#1E1E1E;
-    --w-grid: calc(1400px - 128px);
+    --w-grid: calc(100vw - 128px);
     --w-item-grid : calc(var(--w-grid) / 5);
     --random-column: 0;
 }
@@ -47,9 +47,7 @@ body * {
     width:var(--w-grid);
     grid-template-columns: auto auto auto auto auto;
     height:100%;
-    top:0;
-    left:0;
-   
+    top:0; 
     left:50%;
     transform:translateX(-50%);
     z-index:0;
@@ -260,8 +258,8 @@ text-align: left;
     background:var(--primary-color);
 }
 .services-section .title {
-    width: fit-content;
-    margin: 0 auto;
+    
+    
     grid-row: 1;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -283,7 +281,7 @@ text-align: left;
 }
 .services-section .detail>  div.item-services-active {
     position:relative;
-    padding: 16px 0;
+    padding: 0.6rem 0;
     cursor:pointer;
     transition:300ms;
    
@@ -297,15 +295,16 @@ text-align: left;
     left:0;
 }
 .services-section .detail>  div a {
-    font-family: Marcellus;
-    font-size: 95px;
+    font-family: Poiret One;
+    font-size: 128px;
     font-weight: 400;
     letter-spacing: 0.01em;
+
+
     text-align: left;
     position:relative;
     transform:translateX(-50%);
 
-   
 }   
 .services-section .detail > div:nth-child(1) a {
     left:10%;
@@ -584,3 +583,17 @@ text-align:center;
   }
   
 
+
+
+
+/*----------------------------------------------------------add 27-02-23-----------------------*/
+.h2--wrapper---1 {
+    width:100%;
+
+    /*----can chinh chinh giua-----*/
+    display:flex;
+    justify-content: center;
+    /*----can chinh khu vuc-----*/
+    padding-top: 25vh;
+    padding-bottom: 3rem;
+}
