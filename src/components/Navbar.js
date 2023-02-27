@@ -18,11 +18,13 @@ export default function Navbar() {
         .to([bgNav.current.children[0],bgNav.current.children[1]], {
           scaleX: 1,
           duration: 1,
+          pointerEvents: "auto",
           ease: 'power3.inOut'
         })
         .to(navDom.current, {
           opacity: 1,
           duration: 0.05,
+          pointerEvents: "auto",
           ease: 'ease-in-out'
         }, '<');
     } else {
@@ -30,12 +32,14 @@ export default function Navbar() {
       .to([bgNav.current.children[0],bgNav.current.children[1]], {
           scaleX: 0,
           duration: 1,
+          pointerEvents: "none",
           ease: 'power3.inOut'
         })
         .add('startNavOut')
         .to(navDom.current, {
           opacity: 0,
           duration: 0.05,
+          pointerEvents: "none",
           ease: 'ease-in-out'
         }, 'startNavOut')
         .eventCallback('onStart', () => {
@@ -66,7 +70,7 @@ export default function Navbar() {
     <div className='navbar'>
         <a onClick={openNav} id="" className='ic-nav-open'><SlMenu /></a>
     </div>
-    <div className="modal-nav-view" ref={navDom}>
+    <div className="modal-nav-view" ref={navDom} >
         <div className="bg-move" ref={bgNav}>
           <span></span>
           <span></span>
